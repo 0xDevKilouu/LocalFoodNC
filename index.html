@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalFood NC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>LocalFood NC</h1>
+    <div class="buttons">
+      <button id="scanButton">Scanner</button>
+    </div>
+    <div id="content">
+      <!-- Contenu dynamique sera inséré ici -->
+    </div>
+    <video id="video" style="display: none;"></video>
+  </div>
+  
+  <!-- Inclure les scripts JavaScript ici -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(error => {
+            console.error('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
+  <script src="bundle.js"></script>
+</body>
+</html>

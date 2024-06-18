@@ -1,0 +1,25 @@
+{
+    "name": "localfood",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/app.js",
+    "scripts": {
+      "build": "webpack --config webpack.config.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@zxing/library": "^0.21.1",
+      "axios": "^1.7.2"
+    },
+    "devDependencies": {
+      "webpack": "^5.92.0",
+      "webpack-cli": "^5.1.4",
+      "html-webpack-plugin": "^5.5.0",
+      "copy-webpack-plugin": "^10.2.4",
+      "style-loader": "^3.3.1",
+      "css-loader": "^6.7.3"
+    }
+  }
+  
